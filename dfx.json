@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "mbank": {
+      "main": "src/mbank/main.mo",
+      "type": "motoko"
+    },
+    "mbank_assets": {
+      "dependencies": [
+        "mbank"
+      ],
+      "frontend": {
+        "entrypoint": "src/mbank_assets/src/index.html"
+      },
+      "source": [
+        "src/mbank_assets/assets",
+        "dist/mbank_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
